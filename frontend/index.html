@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>МАФ-ЮГ | Стильные МАФ для твоего города</title>
+    <title>Название под вопросом | Воркаут-оборудование и спортплощадки</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -520,57 +520,6 @@
             to { opacity: 1; }
         }
 
-        /* ---------- ТЕСТОВЫЙ БЛОК ДЛЯ API ---------- */
-        .test-api-block {
-            margin-top: 3rem;
-            background: rgba(20, 24, 30, 0.8);
-            backdrop-filter: blur(8px);
-            border-radius: 32px;
-            padding: 2rem;
-            border: 1px solid var(--neon-green);
-            box-shadow: 0 0 15px rgba(0,242,161,0.2);
-            transition: all 0.3s;
-        }
-        .test-api-block:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px -10px rgba(0,242,161,0.3);
-        }
-        .test-api-block h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--neon-green);
-        }
-        .test-api-block .test-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 500px;
-        }
-        .test-form input, .test-form textarea {
-            background: #0f1219;
-            border: 1px solid #2a2f3a;
-            padding: 12px 16px;
-            border-radius: 20px;
-            color: white;
-            font-family: inherit;
-            transition: all 0.2s;
-        }
-        .test-form input:focus, .test-form textarea:focus {
-            border-color: var(--neon-green);
-            outline: none;
-            transform: scale(1.01);
-        }
-        .test-api-response {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: #0a0c10;
-            border-radius: 20px;
-            font-family: monospace;
-            font-size: 0.9rem;
-            border-left: 3px solid var(--neon-green);
-            transition: all 0.2s;
-        }
-
         /* ---------- ФОРМА ---------- */
         .form-group {
             margin-bottom: 1rem;
@@ -615,16 +564,33 @@
             flex-wrap: wrap;
             gap: 2rem;
         }
-        .social-links a {
-            color: #aaa;
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            transition: all 0.2s;
-            display: inline-block;
+        /* Кнопки Telegram в подвале */
+        .footer-telegram-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-start;
         }
-        .social-links a:hover {
+        .footer-telegram-btns .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1.5px solid var(--neon-green);
             color: var(--neon-green);
-            transform: translateY(-3px) scale(1.1);
+            padding: 10px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .footer-telegram-btns .btn-telegram:hover {
+            background: rgba(0, 242, 161, 0.15);
+            color: white;
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0,242,161,0.4);
         }
 
         /* ---------- АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ ---------- */
@@ -731,8 +697,8 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .social-links {
-                justify-content: center;
+            .footer-telegram-btns {
+                align-items: center;
             }
             .hero-buttons .btn {
                 min-width: auto;
@@ -771,7 +737,7 @@
 <header class="header">
     <div class="container">
         <div class="navbar">
-            <a href="#" class="logo">МАФ-ЮГ</a>
+            <a href="#" class="logo">Название под вопросом </a>
             <button class="mobile-toggle" id="mobileMenuBtn"><i class="fas fa-bolt"></i></button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Главная</a></li>
@@ -790,8 +756,8 @@
     <section class="hero fade-up" id="home">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Малые архитектурные формы <br> для нового поколения</h1>
-                <p>Скамейки, урны, ограждения — ярко, современно, надёжно. Индивидуальные проекты и быстрая установка.</p>
+                <h1>Воркаут-оборудование <br> для нового поколения</h1>
+                <p>Турники, брусья, рукоходы, тренажеры — надёжно, современно. Индивидуальные проекты и быстрая установка.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn"><i class="fas fa-comment-dots"></i> Заказать проект</a>
                     <a href="#products" class="btn btn-outline"><i class="fas fa-grid-2"></i> Вдохновение</a>
@@ -811,13 +777,13 @@
     <!-- Продукция -->
     <section class="section fade-up" id="products">
         <div class="container">
-            <h2>Наше поколение МАФ</h2>
+            <h2>Воркаут-оборудование</h2>
             <div class="section-subtitle">Эстетика, экологичность, характер</div>
             <div class="cards-grid">
-                <div class="service-card"><div class="card-icon"><i class="fas fa-couch"></i></div><h3>Лаунж-скамьи</h3><p>Светодиодная подсветка, эргономика.</p><a href="#" class="service-link">Подробнее →</a></div>
-                <div class="service-card"><div class="card-icon"><i class="fas fa-trash-alt"></i></div><h3>Урны Smart</h3><p>Антивандальные, с прессом.</p><a href="#" class="service-link">Подробнее →</a></div>
-                <div class="service-card"><div class="card-icon"><i class="fas fa-fence"></i></div><h3>Арт-ограждения</h3><p>Графичный дизайн, неон.</p><a href="#" class="service-link">Подробнее →</a></div>
-                <div class="service-card"><div class="card-icon"><i class="fas fa-dice-d6"></i></div><h3>Модульные сцены</h3><p>Для ивентов и зон отдыха.</p><a href="#" class="service-link">Подробнее →</a></div>
+                <div class="service-card"><div class="card-icon"><i class="fas fa-couch"></i></div><h3>Уличные турники</h3><p>Светодиодная подсветка, эргономика.</p><a href="#contact" class="service-link">Подробнее →</a></div>
+                <div class="service-card"><div class="card-icon"><i class="fas fa-trash-alt"></i></div><h3>Брусья и рукоходы</h3><p>Антивандальные, с прессом.</p><a href="#contact" class="service-link">Подробнее →</a></div>
+                <div class="service-card"><div class="card-icon"><i class="fas fa-fence"></i></div><h3>Шведские стенки</h3><p>Графичный дизайн, неон.</p><a href="#contact" class="service-link">Подробнее →</a></div>
+                <div class="service-card"><div class="card-icon"><i class="fas fa-dice-d6"></i></div><h3>Функциональные тренажеры</h3><p>Для ивентов и зон отдыха.</p><a href="#contact" class="service-link">Подробнее →</a></div>
             </div>
         </div>
     </section>
@@ -825,8 +791,8 @@
     <!-- Портфолио -->
     <section class="section fade-up" id="projects">
         <div class="container">
-            <h2>Реальные проекты</h2>
-            <div class="section-subtitle">Наши работы в городах и скверах</div>
+            <h2>Примеры</h2>
+            <div class="section-subtitle">Здесь приходит вдохновение</div>
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1591995562090-7f7a0d3a7c3c?w=500&h=280&fit=crop" alt="Детский игровой комплекс"><div class="gallery-info"><h4>Парк «Молодёжный»</h4><span>Качели + тарзанка</span></div></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=280&fit=crop" alt="Ограждения с неоном"><div class="gallery-info"><h4>Набережная Волна</h4><span>Светодиодные перила</span></div></div>
@@ -841,11 +807,12 @@
         <div class="container about-wrap">
             <div class="about-text">
                 <h2>Стиль. Качество. Эмоции</h2>
-                <p>МАФ-ЮГ — молодёжная команда дизайнеров и инженеров. Мы создаём уличную мебель, которая вдохновляет. Полный цикл: от эскиза до монтажа.</p>
+                <p>Название под вопросом — команда инженеров и спортсменов. Проектируем и
+производим надёжное воркаут-оборудование для улицы.</p>
                 <div class="about-features">
-                    <div class="feature"><i class="fas fa-bolt"></i> <span>Быстрая доставка по РФ</span></div>
-                    <div class="feature"><i class="fas fa-palette"></i> <span>Любые кастомные цвета</span></div>
-                    <div class="feature"><i class="fas fa-head-side-vr"></i> <span>3D-визуализация бесплатно</span></div>
+                    <div class="feature"><i class="fas fa-bolt"></i> <span>Расчёт нагрузки до 250 кг</span></div>
+                    <div class="feature"><i class="fas fa-palette"></i> <span>Антикоррозийное покрытие</span></div>
+                    <div class="feature"><i class="fas fa-head-side-vr"></i> <span>Адаптация под любой рост</span></div>
                 </div>
                 <a href="#contact" class="btn"><i class="fab fa-telegram"></i> Обсудить идею</a>
             </div>
@@ -865,6 +832,8 @@
                     <h3>Контакты</h3>
                     <div class="contact-details">
                         <p><i class="fas fa-phone-alt"></i> +7 (863) 400-11-22</p>
+                        <p><i class="fas fa-phone-alt"></i> +8 (952) 566-15-34</p>
+                        <p><i class="fas fa-phone-alt"></i> +8 (951) 536-32-28</p>
                         <p><i class="fas fa-paper-plane"></i> ysajaya86@gmail.com</p>  
                         <p><i class="fas fa-paper-plane"></i> SajaiaLev1975@gmail.com</p>
                     </div>
@@ -892,21 +861,6 @@
                     </form>
                 </div>
             </div>
-
-            <!-- Тестовый блок для проверки API -->
-            <div class="test-api-block">
-                <h3><i class="fas fa-code-branch"></i> Тестовый модуль связи с API</h3>
-                <p>Здесь вы можете проверить отправку данных на реальный сервер. Замените <code>API_TEST_URL</code> на адрес вашего бэкенда.</p>
-                <div class="test-form">
-                    <input type="text" id="testName" placeholder="Тестовое имя (обязательно)">
-                    <textarea id="testMessage" rows="2" placeholder="Тестовое сообщение"></textarea>
-                    <button class="btn" id="testApiBtn"><i class="fas fa-vial"></i> Отправить тест</button>
-                </div>
-                <div class="test-api-response" id="testApiResponse">
-                    ⚡ Здесь будет ответ от сервера
-                </div>
-                <small style="color:#aaa;">Примечание: если бэкенд не настроен, используйте имитацию.</small>
-            </div>
         </div>
     </section>
 </main>
@@ -914,9 +868,17 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-            <div><div class="logo" style="font-size:1.8rem;">МАФ-ЮГ</div><p>Уличный дизайн нового поколения</p></div>
+            <div><div class="logo" style="font-size:1.8rem;">Название под вопросом</div><p> Спорт, доступный каждому</p></div>
             <div><h4>Навигация</h4><ul style="list-style:none;"><li><a href="#home" style="color:#aaa;">Главная</a></li><li><a href="#products" style="color:#aaa;">Каталог</a></li><li><a href="#contact" style="color:#aaa;">Контакты</a></li></ul></div>
-            <div><h4>Соцсети</h4><div class="social-links"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-telegram"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
+            <div>
+                <h4>Связь в Telegram</h4>
+                <div class="footer-telegram-btns">
+                    <!-- ВСТАВЬ СВОЮ ССЫЛКУ В АТРИБУТ href НИЖЕ -->
+                    <a href="https://t.me/AndreyB_CrashGame" target="_blank" class="btn-telegram"><i class="fab fa-telegram"></i> Создатель</a>
+                    <!-- ВСТАВЬ СВОЮ ССЫЛКУ В АТРИБУТ href НИЖЕ -->
+                    <a href="https://t.me/TipaProstoChel" target="_blank" class="btn-telegram"><i class="fab fa-telegram"></i> Создатель</a>
+                </div>
+            </div>
         </div>
         <div class="copyright" style="text-align:center; margin-top:2rem;">Сайт сделан командой q_couldteam
             спасибо что пользуетесь нашими услугами
@@ -947,7 +909,7 @@
     document.body.appendChild(script);
 </script>
 
-<!-- Основные скрипты с валидацией -->
+<!-- Основные скрипты с валидацией и отправкой на localhost -->
 <script>
     (function() {
         // ---------- ФУНКЦИЯ ВАЛИДАЦИИ ТЕЛЕФОНА / TELEGRAM ----------
@@ -1002,6 +964,9 @@
         const form = document.getElementById('apiForm');
         const statusDiv = document.getElementById('formStatus');
         const submitBtn = document.getElementById('submitBtn');
+
+        // Адрес локального сервера
+        const API_URL = 'http://localhost:8000/lead';
 
         // Валидация в реальном времени при вводе
         nameInput.addEventListener('input', function() {
@@ -1075,9 +1040,24 @@
             };
 
             try {
-                console.log('📦 Данные для отправки:', formData);
-                // Имитация отправки
-                await new Promise(resolve => setTimeout(resolve, 800));
+                console.log('📦 Данные для отправки на', API_URL, ':', formData);
+                
+                // Реальная отправка на локальный сервер
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Сервер ответил ошибкой: ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('✅ Ответ сервера:', result);
+                
                 statusDiv.innerHTML = '<span style="color:#00f2a1;">✅ Заявка принята! Скоро свяжемся 🚀</span>';
                 form.reset();
                 // Очищаем ошибки после сброса
@@ -1086,55 +1066,11 @@
                 clearError(messageInput, messageError);
             } catch (error) {
                 console.error('Ошибка при отправке:', error);
-                statusDiv.innerHTML = '<span style="color:#ff3b7c;">⚠️ Ошибка отправки. Попробуй позже.</span>';
+                statusDiv.innerHTML = `<span style="color:#ff3b7c;">⚠️ Ошибка отправки: ${error.message}. Проверьте, запущен ли локальный сервер на ${API_URL}</span>`;
             } finally {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-                setTimeout(() => { if (statusDiv) statusDiv.innerHTML = ''; }, 4000);
-            }
-        });
-
-        // ---------- ТЕСТОВЫЙ API (с валидацией имени) ----------
-        const testBtn = document.getElementById('testApiBtn');
-        const testNameInput = document.getElementById('testName');
-        const testMessageInput = document.getElementById('testMessage');
-        const testResponseDiv = document.getElementById('testApiResponse');
-
-        testBtn.addEventListener('click', async () => {
-            const testName = testNameInput.value.trim();
-            if (!testName) {
-                testResponseDiv.innerHTML = '❌ Поле "Тестовое имя" обязательно для заполнения.';
-                return;
-            }
-
-            const originalText = testBtn.innerHTML;
-            testBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
-            testBtn.disabled = true;
-            testResponseDiv.innerHTML = '⏳ Отправка запроса...';
-
-            const testData = {
-                name: testName,
-                message: testMessageInput.value.trim(),
-                timestamp: new Date().toISOString()
-            };
-
-            try {
-                // Имитация ответа
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                const mockResponse = {
-                    status: 'ok',
-                    message: 'Тестовые данные получены сервером (имитация)',
-                    received: testData
-                };
-                testResponseDiv.innerHTML = `✅ Имитация ответа сервера: <br> <code>${JSON.stringify(mockResponse, null, 2)}</code><br>
-                <span style="color:#aaa;">🔁 Замените API_TEST_URL на реальный адрес и раскомментируйте fetch.</span>`;
-                console.log('Тестовые данные (имитация):', testData);
-            } catch (error) {
-                console.error('Ошибка при тестовом запросе:', error);
-                testResponseDiv.innerHTML = `⚠️ Ошибка: ${error.message}. Проверьте адрес API и настройки CORS.`;
-            } finally {
-                testBtn.innerHTML = originalText;
-                testBtn.disabled = false;
+                setTimeout(() => { if (statusDiv) statusDiv.innerHTML = ''; }, 6000);
             }
         });
 
@@ -1185,6 +1121,17 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Дополнительно: плавная прокрутка для ссылок "Подробнее" в карточках товаров
+        document.querySelectorAll('.service-link[href="#contact"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector('#contact');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
