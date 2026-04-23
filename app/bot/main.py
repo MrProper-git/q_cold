@@ -7,9 +7,10 @@ from sqlalchemy import select
 
 from app.config import bot_api, admin_id
 
-session = AiohttpSession(
-    proxy="socks5://185.131.204.212:1080"  # замени на свой
-)
+#Прокси на будущее
+"""session = AiohttpSession(
+    proxy=""
+)"""
 
 bot = Bot(token=bot_api)
 dp = Dispatcher()
@@ -21,14 +22,14 @@ async def check_new_leads():
     while True:
         try:
             async with new_session() as session:
-                # Ищем непрочитанные заявки
+
                 result = await session.execute(
                     select(LeadsModel).where(LeadsModel.notified == False)
                 )
                 leads = result.scalars().all()
 
                 for lead in leads:
-                    # Отправляем админу
+
                     message = (
                         f"🆕 **Новая заявка!**\n\n"
                         f"👤 **Имя:** {lead.name}\n"
@@ -38,7 +39,7 @@ async def check_new_leads():
                     )
                     await bot.send_message(admin_id, message, parse_mode="Markdown")
 
-                    # Помечаем как отправленное
+
                     lead.notified = True
                     await session.commit()
 
@@ -47,7 +48,7 @@ async def check_new_leads():
         except Exception as e:
             print(f"❌ Ошибка в боте: {e}")
 
-        # Пауза перед следующим циклом
+
         await asyncio.sleep(3)
 
 
