@@ -5,6 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from pathlib import Path
+
 from routers.leads import leads
 from routers.admin import admin
 from app.shared.database import setup_database
@@ -21,8 +23,9 @@ app = FastAPI(lifespan=lifespan)
 app.include_router(leads)
 app.include_router(admin)
 
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
+ROOT_DIR = Path(__file__).parent.parent.parent  # поднимаемся на 3 уровня вверх
 
+app.mount("/static", StaticFiles(directory=str(ROOT_DIR / "frontend")), name="static")
 @app.get("/")
 async def root():
     return FileResponse("frontend/index.html")
