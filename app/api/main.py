@@ -6,7 +6,12 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from pathlib import Path
+import sys
+import os
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+# Теперь эти импорты работают
 from routers.leads import leads
 from routers.admin import admin
 from app.shared.database import setup_database
