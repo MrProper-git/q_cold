@@ -1,8 +1,9 @@
+
 meta:
   environment: python
   toolchain:
     name: pip
-    version: 3.11
+    version: "3.11"
 
 build:
   requirementsPath: requirements.txt
@@ -12,3 +13,5 @@ run:
   command: uvicorn app.api.main:app --host 127.0.0.1 --port 8000
   containerPort: 8000
   persistenceMount: /data
+  environment:
+    - PYTHONPATH=/app
