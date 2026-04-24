@@ -14,4 +14,4 @@ run:
   containerPort: 8000
   persistenceMount: /data
   environment:
-    \- PYTHONPATH=/app
+    PYTHONPATH: /app
