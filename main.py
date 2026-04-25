@@ -5,8 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers.leads import leads
-from routers.admin import admin
+from app.api.routers.leads import leads
+from app.api.routers.admin import admin
 from app.shared.database import setup_database
 
 
