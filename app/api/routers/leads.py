@@ -12,6 +12,7 @@ leads = APIRouter()
 
 @leads.post("/lead")
 async def post_lead(data: CreateLeads, session: SessionDep):
+    print(f"📥 Получены данные: name={data.name}, contact={data.contact}, text={data.text}")
     new_lead = LeadsModel(
         time=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         name = data.name,
