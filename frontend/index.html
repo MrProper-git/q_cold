@@ -654,6 +654,10 @@
             .container {
                 padding: 0 20px;
             }
+            /* Уменьшаем логотип, чтобы влезал с кнопкой-бургером */
+            .logo {
+                font-size: 1.5rem;
+            }
             .hero {
                 padding: 3rem 0 4rem;
             }
@@ -706,6 +710,13 @@
             }
         }
         @media (max-width: 480px) {
+            /* Ещё сильнее уменьшаем логотип и бургер на очень узких экранах */
+            .logo {
+                font-size: 1.3rem;
+            }
+            .mobile-toggle {
+                font-size: 1.5rem;
+            }
             .hero-content h1 {
                 font-size: 1.8rem;
             }
@@ -1033,9 +1044,7 @@
             const formData = { 
                 name, 
                 contact: contactValue, 
-                contactType: phoneValidation.type,
-                message, 
-                source: 'mafug_site' 
+                text: text
             };
 
             try {
